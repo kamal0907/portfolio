@@ -34,7 +34,15 @@
     <!-- Navigation -->
     <nav id="nav">
         <div class="nav-logo">&lt;<span>kamal</span>.dev /&gt;</div>
-        <ul class="nav-links">
+        
+        <!-- Hamburger Toggle -->
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -311,6 +319,31 @@
                 <h2 class="section-title">Selected <em>Works</em></h2>
             </div>
             <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <img src="mindmate.png" alt="MindMate AI">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badge">Featured AI Project</div>
+                        <h3>MindMate AI</h3>
+                        <p>An AI-powered mental wellness assistant designed to track emotional health through smart
+                            journaling and sentiment analysis. Built with bleeding-edge Next.js 16 and React 19.</p>
+                        <ul class="project-features">
+                            <li>Integrated Grok AI (x.ai) for real-time sentiment analysis and context-aware chat.</li>
+                            <li>Full-stack architecture with daily gratitude logging and streak tracking.</li>
+                            <li>Secure Google OAuth & JWT authentication with premium Framer Motion UI.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Grok
+                                AI</span><span>Next.js</span><span>Tailwind CSS</span><span>TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/kamal0907/mindMate-backend.git" target="_blank"
+                                class="project-link">Source Code ↗</a>
+                            <a href="#" class="project-link demo-btn">Live Demo (Coming Soon)</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card reveal">
                     <div class="project-img">
                         <img src="marketplace.png" alt="Meridian Marketplace">

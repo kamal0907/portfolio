@@ -9,7 +9,31 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initForm();
     initParallax();
+    initMobileMenu();
 });
+
+// --- Mobile Menu ---
+function initMobileMenu() {
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (!navToggle || !navLinks) return;
+
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 // --- Custom Cursor ---
 function initCursor() {
